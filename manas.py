@@ -8,7 +8,7 @@ import gevent
 import manasM
 from ctypes import windll, CFUNCTYPE, c_int, POINTER, c_void_p
 from PyQt5 import uic, QtCore
-from PyQt5.QtWidgets import QComboBox, QWidget, QApplication, QMouseEventTransition
+from PyQt5.QtWidgets import QWidget, QApplication
 from PyQt5.QtCore import *
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
@@ -21,13 +21,7 @@ kernel32 = windll.kernel32
 WM_LBUTTONDOWN = 0x0201
 WM_LBUTTONUP = 0x0202
 
-
-WH_KEYBOARD_LL = 13
-WH_MOUSE = 7
 WH_MOUSE_LL = 14
-WM_KEYDOWN = 0x0100
-CTRL_CODE = 162
-
 
 Ui_Widget, _ = uic.loadUiType("mana.ui")
 
@@ -118,7 +112,6 @@ class Form(QWidget, Ui_Widget):
             return
         print("훅 제거")
         self.User32.UnhookWindowsHookEx(self.hooked)
-
 
     def tag_check(self, flag):  # 현재페이지에 해당 태그가 존재하는지 유무 체크
         global m
@@ -247,7 +240,6 @@ class Form(QWidget, Ui_Widget):
             log.debug("셋팅된 URL = " + str(self.urlList))
 
         set_url_list()
-        # print("현재 콤보 텍스트 = " + self.combotext)
         for url in self.urlList:
             div = []
             if self.combotext != "최신":
@@ -310,18 +302,6 @@ class Form(QWidget, Ui_Widget):
                 gevent.spawn(test_queue_set, img).join()
                 self.pool.map(test_queue_get, range(4))
 
-                # gevent.joinall([
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                #     gevent.spawn(test_queue_get),
-                # ])
                 if self.combo.itemText(self.combo.currentIndex()) != "최신":
                     gevent.joinall(self.d_t)
 
@@ -330,25 +310,21 @@ class Form(QWidget, Ui_Widget):
         log.debug("┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃ 모 두 완 료 ┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃")
 
         self.msg_thread("다운로드완료", )
+
 # TODO 마우스눌림 이벤트
     def mousePressEvent(self, event):  # 마우스 눌림인지 체크하는 기본함수
-        # print("클릭됨")
         self.ex = - event.x()
         self.ey = - event.y()
+
 # TODO 마우스무브 이벤트
     def mouseMoveEvent(self, event):  # 실시간 마우스 좌표가져오는 기본함수
         def xy(xy):
             return lambda x: x + xy
-
-        # print(self.underMouse())
         x = xy(event.globalX())
         y = xy(event.globalY())
-        # print("mx = {0} my = {1} x = {2} y = {3}".format(mx, my, x, y))
         if not self.is_combo:
             self.move(x(self.ex), y(self.ey))
-        # txt = "Mouse 위치 ; x={0},y={1}, global={2},{3}".format(event.x(), event.y(), event.globalX(), event.globalY())
-        # print(txt)
-        # print(event.MouseButtonPress)
+
 # TODO 클로즈 이벤트
     def closeEvent(self, event):  # 닫기를 실시간 감지하는 기본함수
         log.debug("┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃ 종 료 ┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃")
@@ -365,20 +341,6 @@ class Form(QWidget, Ui_Widget):
                 self.is_combo = True
 
         return super(Form, self).eventFilter(obj, event)
-
-    #
-    # def enterEvent(self, event):
-    #
-    #     if self.combo.underMouse():
-    #         self.combo.underMouse()
-    #         print("현재 마우스는 콤보안에 있어")
-    #     return super(Form, self).enterEvent(event)
-    # def leaveEvent(self, event):
-    #     print("Mouse Left")
-    #     return super(Form, self).enterEvent(event)
-
-    # def mouseReleaseEvent(self, event):
-
 
 
 if __name__ == '__main__':
