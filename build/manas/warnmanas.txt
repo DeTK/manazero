@@ -1,0 +1,62 @@
+missing module named 'win32com.gen_py' - imported by win32com, D:\py\venv\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_win32comgenpy.py
+missing module named pyimod03_importers - imported by D:\py\venv\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
+missing module named 'multiprocessing.forking' - imported by D:\py\venv\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
+missing module named resource - imported by posix, D:\py\manazero\manas.py
+missing module named posix - imported by os, D:\py\manazero\manas.py
+missing module named _posixsubprocess - imported by subprocess, multiprocessing.util, D:\py\manazero\manas.py
+missing module named cPickle - imported by gevent._tblib, D:\py\manazero\manas.py
+missing module named cStringIO - imported by cPickle, PyQt5.uic.port_v2.string_io, selenium.webdriver.firefox.firefox_profile, D:\py\manazero\manas.py
+missing module named _continuation - imported by gevent.greenlet, D:\py\manazero\manas.py
+missing module named psutil._psutil_posix - imported by psutil, psutil._pslinux, psutil._psosx, psutil._psbsd, psutil._pssunos, psutil._psaix, D:\py\manazero\manas.py
+missing module named _psutil_linux - imported by psutil, D:\py\manazero\manas.py
+missing module named psutil._psutil_osx - imported by psutil, psutil._psosx, D:\py\manazero\manas.py
+missing module named psutil._psutil_bsd - imported by psutil, psutil._psbsd, D:\py\manazero\manas.py
+missing module named psutil._psutil_sunos - imported by psutil, psutil._pssunos, D:\py\manazero\manas.py
+missing module named psutil._psutil_aix - imported by psutil, psutil._psaix, D:\py\manazero\manas.py
+missing module named __pypy__ - imported by gevent._tblib, D:\py\manazero\manas.py
+missing module named copy_reg - imported by gevent._tblib, cPickle, cStringIO, D:\py\manazero\manas.py
+missing module named thread - imported by gevent.lock, gevent.thread, D:\py\manazero\manas.py
+missing module named fcntl - imported by gevent.fileobject, gevent.os, gevent.subprocess, D:\py\manazero\manas.py
+missing module named org - imported by pickle, D:\py\manazero\manas.py
+missing module named readline - imported by cmd, code, pdb, D:\py\manazero\manas.py
+missing module named termios - imported by tty, getpass, D:\py\manazero\manas.py
+missing module named __builtin__ - imported by gevent._compat, gevent.monkey, D:\py\manazero\manas.py, gevent.builtins, pkg_resources._vendor.pyparsing
+missing module named 'zope.event' - imported by gevent.events, D:\py\manazero\manas.py
+missing module named pkg_resources.extern.six - imported by pkg_resources.extern, pkg_resources, D:\py\manazero\manas.py
+missing module named 'pkg_resources.extern.six.moves' - imported by pkg_resources, D:\py\manazero\manas.py, pkg_resources._vendor.packaging.requirements
+missing module named pkg_resources.extern.appdirs - imported by pkg_resources.extern, pkg_resources, D:\py\manazero\manas.py
+missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources, D:\py\manazero\manas.py
+missing module named grp - imported by shutil, tarfile, D:\py\manazero\manas.py
+missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection, D:\py\manazero\manas.py
+missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection, D:\py\manazero\manas.py
+missing module named multiprocessing.get_context - imported by multiprocessing, multiprocessing.pool, multiprocessing.managers, multiprocessing.sharedctypes, D:\py\manazero\manas.py
+missing module named multiprocessing.TimeoutError - imported by multiprocessing, multiprocessing.pool, D:\py\manazero\manas.py
+missing module named multiprocessing.get_start_method - imported by multiprocessing, multiprocessing.spawn, D:\py\manazero\manas.py
+missing module named multiprocessing.set_start_method - imported by multiprocessing, multiprocessing.spawn, D:\py\manazero\manas.py
+missing module named multiprocessing.SimpleQueue - imported by multiprocessing, concurrent.futures.process, D:\py\manazero\manas.py
+missing module named __main__ - imported by pkg_resources, D:\py\manazero\manas.py
+missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
+missing module named StringIO - imported by PyQt5.uic.port_v2.string_io, selenium.webdriver.remote.webelement, pkg_resources._vendor.six
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
+missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
+missing module named com - imported by pkg_resources._vendor.appdirs
+missing module named _winreg - imported by platform, selenium.webdriver.firefox.firefox_binary, D:\py\manazero\manas.py, pkg_resources._vendor.appdirs
+missing module named java - imported by platform, D:\py\manazero\manas.py
+missing module named 'java.lang' - imported by platform, xml.sax._exceptions, D:\py\manazero\manas.py
+missing module named vms_lib - imported by platform, D:\py\manazero\manas.py
+missing module named Queue - imported by gevent.queue, D:\py\manazero\manas.py
+missing module named _dummy_threading - imported by dummy_threading, D:\py\manazero\manas.py
+missing module named 'org.python' - imported by copy, xml.sax, D:\py\manazero\manas.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, D:\py\manazero\manas.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, D:\py\manazero\manas.py
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, distutils.util, psutil, netrc, getpass, D:\py\manazero\manas.py
+missing module named iconv_codec - imported by bs4.dammit
+missing module named cchardet - imported by bs4.dammit
+missing module named 'html5lib.treebuilders' - imported by bs4.builder._html5lib
+missing module named 'html5lib.constants' - imported by bs4.builder._html5lib
+missing module named html5lib - imported by bs4.builder._html5lib
+missing module named urllib2 - imported by selenium.webdriver.common.utils, selenium.webdriver.remote.remote_connection, selenium.webdriver.common.service
+missing module named urlparse - imported by selenium.webdriver.remote.remote_connection
+missing module named httplib - imported by selenium.webdriver.firefox.webdriver, selenium.webdriver.remote.remote_connection, selenium.webdriver.safari.webdriver, selenium.webdriver.blackberry.webdriver, selenium.webdriver.webkitgtk.webdriver
+missing module named port_v2 - imported by PyQt5.uic.properties
+missing module named _scproxy - imported by urllib.request
