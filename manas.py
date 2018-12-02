@@ -54,21 +54,14 @@ options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6)
                      "AppleWebKit/537.36 (KHTML, like Gecko) "
                      "Chrome/61.0.3163.100 Safari/537.36")
 options.add_argument("lang=ko_KR")  # 한국어!
-
-
-# self.combo.setStyleSheet(":hover {border-bottom-right-radius: 3px;}")
-is_LeftClickDown = False
 # TODO 훅함수
 def getFPTR(fn):
     CMPFUNC = CFUNCTYPE(c_int, c_int, c_int, POINTER(c_void_p))
     return CMPFUNC(fn)
 
 def hookProc(nCode, wParam, lParam):
-    global is_LeftClickDown
-    if WM_LBUTTONDOWN == wParam:
-        is_LeftClickDown = True
-    elif WM_LBUTTONUP == wParam:
-        is_LeftClickDown = False
+
+    if WM_LBUTTONUP == wParam:
         keyhook.is_combo = False
     return user32.CallNextHookEx(keyhook.hooked, nCode, wParam, lParam)
 
@@ -344,8 +337,6 @@ class Form(QWidget, Ui_Widget):
         self.ey = - event.y()
 # TODO 마우스무브 이벤트
     def mouseMoveEvent(self, event):  # 실시간 마우스 좌표가져오는 기본함수
-        global is_LeftClickDown
-        print(is_LeftClickDown)
         def xy(xy):
             return lambda x: x + xy
 
