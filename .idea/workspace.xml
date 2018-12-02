@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89aee1c5-72d8-43da-b19f-5aad045da5fa" name="Default" comment="" />
+    <list default="true" id="89aee1c5-72d8-43da-b19f-5aad045da5fa" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/manas.py" beforeDir="false" afterPath="$PROJECT_DIR$/manas.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,20 +16,11 @@
       <file leaf-file-name="manas.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="385" column="29" lean-forward="true" selection-start-line="385" selection-start-column="29" selection-end-line="385" selection-end-column="29" />
+            <state relative-caret-position="324">
+              <caret line="389" lean-forward="true" selection-start-line="389" selection-end-line="389" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myhook.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myhook.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="54" selection-start-column="54" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -75,6 +68,9 @@
       <find>hooked</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -107,17 +103,18 @@
         <option value="$PROJECT_DIR$/controlget_ex3.py" />
         <option value="$PROJECT_DIR$/asdasd.py" />
         <option value="$PROJECT_DIR$/hook_ex.py" />
-        <option value="$PROJECT_DIR$/manas.py" />
         <option value="$PROJECT_DIR$/myhook.py" />
+        <option value="$PROJECT_DIR$/manas.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="30" />
     <option name="y" value="110" />
     <option name="width" value="1732" />
     <option name="height" value="858" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -289,15 +286,15 @@
     <frame x="30" y="110" width="1732" height="858" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10701546" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10820452" />
       <window_info anchor="right" id="TODO" order="3" sideWeight="0.23424494" visible="true" weight="0.08204518" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.33763945" weight="0.1855524" />
-      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32845744" />
-      <window_info anchor="bottom" x="11" y="458" width="1187" height="197" id="Run" order="9" sideWeight="0.63852555" side_tool="true" visible="true" weight="0.15014164" />
+      <window_info anchor="bottom" x="11" y="458" width="1187" height="197" id="Run" order="9" sideWeight="0.63852555" side_tool="true" weight="0.15014164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.36147442" visible="true" weight="0.15014164" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.36147442" visible="true" weight="0.15056819" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.34409866" weight="0.4546742" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -310,21 +307,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14495113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921812" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3537234" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32845744" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32921812" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.47606382" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.36076817" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32845744" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32921812" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -332,13 +329,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/imge_ex.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -757,9 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
           <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -779,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="385" column="29" lean-forward="true" selection-start-line="385" selection-start-column="29" selection-end-line="385" selection-end-column="29" />
+        <state relative-caret-position="324">
+          <caret line="389" lean-forward="true" selection-start-line="389" selection-end-line="389" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

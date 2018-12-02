@@ -387,7 +387,7 @@ class Form(QWidget, Ui_Widget):
     #     return super(Form, self).enterEvent(event)
 
     # def mouseReleaseEvent(self, event):
-    #     pass
+
 
 
 if __name__ == '__main__':
