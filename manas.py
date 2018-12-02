@@ -18,7 +18,6 @@ from gevent.queue import Queue
 user32 = windll.user32
 kernel32 = windll.kernel32
 
-WM_LBUTTONDOWN = 0x0201
 WM_LBUTTONUP = 0x0202
 
 WH_MOUSE_LL = 14
@@ -48,6 +47,7 @@ options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6)
                      "AppleWebKit/537.36 (KHTML, like Gecko) "
                      "Chrome/61.0.3163.100 Safari/537.36")
 options.add_argument("lang=ko_KR")  # 한국어!
+
 # TODO 훅함수
 def getFPTR(fn):
     CMPFUNC = CFUNCTYPE(c_int, c_int, c_int, POINTER(c_void_p))
