@@ -18,6 +18,7 @@ from gevent.queue import Queue
 user32 = windll.user32
 kernel32 = windll.kernel32
 
+WM_LBUTTONDOWN = 0x0201
 WM_LBUTTONUP = 0x0202
 
 WH_MOUSE_LL = 14
@@ -55,6 +56,9 @@ def getFPTR(fn):
 
 def hookProc(nCode, wParam, lParam):
 
+    if WM_LBUTTONDOWN == wParam:
+        keyhook.is_combo = True
+
     if WM_LBUTTONUP == wParam:
         keyhook.is_combo = False
     return user32.CallNextHookEx(keyhook.hooked, nCode, wParam, lParam)
@@ -69,8 +73,14 @@ class Form(QWidget, Ui_Widget):
         super(Form, self).__init__(parent=parent)
         self.setupUi(self)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        # TODO 이벤트필터에 객체 등록
         self.combo.installEventFilter(self)
         self.combo_2.installEventFilter(self)
+        self.radioButton.installEventFilter(self)
+        self.pushButton.installEventFilter(self)
+        self.pushButton_2.installEventFilter(self)
+        self.pushButton_3.installEventFilter(self)
+        
         self.highPath = ""  # 최상위 경로
         self.urlList = []  # 주소
         self.soup = {}  # 뷰티플수프
@@ -96,6 +106,7 @@ class Form(QWidget, Ui_Widget):
         self.User32 = user32
         self.hooked = None
         self.is_combo = False
+        self.objName = {}
 
 # TODO 훅설치
 
@@ -136,11 +147,13 @@ class Form(QWidget, Ui_Widget):
             c = self.soup.select('#HTML1 > div.widget-content > div > div > span > div > span a')
             if len(c) != 0:
                 self.is_Tag = True
+                self.combo.addItem("목록", "목록")
                 for i, aa in enumerate(c):
                     if 0 < i <= 33:  # 0보다 i가 크면서 i가 33 이랑 작거나 같을때까지
                         #  print(str(i) + " " + str(c[i].attrs['href']))
                         self.combo.addItem(c[i].text, c[i].attrs['href'])
-                self.combo.addItem("최신", "http://manazero008h.blogspot.com/2015/08/150_9.html")
+                self.combo.addItem("최신", "http://manazero009i.blogspot.com/")
+                self.combo.setCurrentIndex(0)
         elif flag == "퍼스트":
             d = self.soup.select('div[id*=post] > div.related-posts-widget > ul > li > a[href]')
             self.masterD = d
@@ -148,9 +161,10 @@ class Form(QWidget, Ui_Widget):
                 self.is_Tag = True
                 self.path = "/"
                 self.originalName = ""
-                self.combo_2.addItem(self.combo.itemText(self.combo.currentIndex()) + "목록", "목록")
+                self.combo_2.addItem(self.combo.itemText(self.combo.currentIndex()), "목록")
                 for i, v in enumerate(d):
                     self.combo_2.addItem(d[i].text, d[i].attrs['href'])
+                self.combo_2.setCurrentIndex(0)
 
     def flag(self, flag):
         while True:
@@ -323,6 +337,7 @@ class Form(QWidget, Ui_Widget):
             return lambda x: x + xy
         x = xy(event.globalX())
         y = xy(event.globalY())
+
         if not self.is_combo:
             self.move(x(self.ex), y(self.ey))
 
@@ -338,9 +353,7 @@ class Form(QWidget, Ui_Widget):
 # TODO 이벤트 필터
     def eventFilter(self, obj, event):
         if event.type() == 10:
-            if obj == self.combo or obj == self.combo_2:
-                self.is_combo = True
-
+            pass
         return super(Form, self).eventFilter(obj, event)
 
 
