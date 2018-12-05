@@ -40,7 +40,7 @@ log.addHandler(fileHandler)
 log.addHandler(streamHandler)
 
 options = webdriver.ChromeOptions()
-# options.add_argument('headless')
+options.add_argument('headless')
 options.add_argument('window-size=1920x1080')
 options.add_argument("disable-gpu")
 options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) "
@@ -78,7 +78,7 @@ class Form(QWidget, Ui_Widget):
 
         self.pool = Pool(4)
         self.drivers = webdriver.Chrome('./chromedriver', chrome_options=options)  # 크롬드라이버위치 지정및 옵션 설정
-        self.drivers.get("http://manazero008h.blogspot.com/2015/08/150_9.html")
+        self.drivers.get("http://manazero009i.blogspot.com/")
         self.flag("리스트")
         self.comboIndex = 0
         self.ex = 0  # - event x좌표
@@ -179,9 +179,10 @@ class Form(QWidget, Ui_Widget):
     def gui_close(self):
         log.debug("구이 : 드라이버 종료")
         self.hide()
+
         self.pool.kill()
-        self.drivers.quit
         keyhook.uninstallHookProc()
+        self.drivers.quit()
         sys.exit(app.exit())
 
     @pyqtSlot()
